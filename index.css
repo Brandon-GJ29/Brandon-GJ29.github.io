@@ -14,7 +14,7 @@ body{
 
 
 
-h1{font-size:3.5em; }
+h1{font-size: 9vw;; }
 h2{font-size:2.7em; }
 h3{font-size:2.0em; }
 p{font-size:1.5em;
@@ -44,6 +44,9 @@ button:hover{
 .container{
     max-width: 1400 px;
     margin: auto;
+}
+.colortitulo{ 
+    font-size:2.7em;
 }
 .colorcorreo{
     font-family: 'Berlin Sans FB',sans-serif; 
@@ -105,6 +108,27 @@ header a:hover {
     background-size: cover;
     background-position: center center;
 
+}
+
+#Home .botones{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center ;
+    margin: 0;
+    padding: 0;
+
+    gap: 10px; 
+    margin-top: 10px; 
+
+}
+
+.botones a {
+    margin-right: 20px; /* Ajusta el valor según la separación que desees */
+}
+
+.botones a:last-child {
+    margin-right: 0; /* Elimina el margen del último ícono */
 }
 
 #About{
@@ -224,3 +248,81 @@ header a:hover {
 
 }
 
+/*Seccion 4*/
+
+#Portafolio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction:  column;
+    height: 90vh;
+    color: rgb(255, 255, 255);
+    background-image:linear-gradient(
+        0deg,
+        rgba(0,0,0,.5),
+        rgba(0,0,0,.5)
+        
+    ) 
+    ,url(/Imagenes/Fondo1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#Portafolio h1{
+    font-size: 9vw;
+}
+
+footer{
+    background-color: rgba(247, 247, 247, 0.5);
+}
+
+footer .container{
+    
+    font-family: 'Berlin Sans FB',sans-serif; 
+    display: flex;
+    justify-content: center;
+    align-items: self-end;
+    margin: 0;
+    padding: 0;
+    height: 50px;
+}
+/*Esto es para ajustarla cuando sea pantalla completa*/
+@media(min-width:720px){
+    header {
+        position: fixed;
+        width: 100%;
+    }
+    header .container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content:space-between ;
+    }
+    header nav{
+        flex-direction: row;
+        display: flex;
+        justify-content: center;
+        align-items: self-end;
+        padding-bottom: 0;
+        padding-right:20px ;
+    }
+    #Home {
+        height: 100vh;
+    }
+
+    #Resumen .programas{
+        display: flex;
+        justify-content: center;
+
+    }
+    #Resumen p{
+        display: block;
+    }
+    #Resumen .carta {
+        padding: 15px;
+    }
+
+
+}
